@@ -1,0 +1,58 @@
+# Git Ignore — Robert Systems GmbH
+.env
+.venv/
+node_modules/
+dist/
+.DS_Store
+*.pyc
+__pycache__/
+memory/cron-health-state.json
+.openclaw/
+paperclip/
+
+# Media files — too large for GitHub (>100MB limit)
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.mp3
+*.wav
+*.aac
+*.m4a
+*.m4v
+*.mkv
+*.avi
+*.webm
+video-pipeline/public/assets/
+video-pipeline/whisper.cpp/
+Tiktok Robert/
+tiktok-marketing/hot-takes/*.mp3
+tiktok-marketing/recaps/*.mp3
+tiktok-marketing/voice-messages/
+
+# Vercel
+.vercel/
+website/.vercel/
+
+# Memory (could contain PII)
+memory/finance/
+memory/leads/
+memory/system/env-backups/*.bak
+memory/system/env-backups/.env*
+memory/system/cron-registry.json
+memory/agent-rules/.rate-*
+
+# Protected downloads (served via API, NOT as static files)
+website/_protected/
+
+# OpenClaw — sensitive workspace files (business strategy, schedules, personal data)
+MEMORY.md
+HEARTBEAT.md
+USER.md
+memory/.paperclip-agents-backup-*/
+
+# Node
+node_modules/
+
+# Service Account Keys
+.secrets/
